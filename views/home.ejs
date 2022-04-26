@@ -1,0 +1,20 @@
+
+<% include partials/header.ejs %>
+<h1>Home</h1>
+<p class ="newProject">Hello.</p>
+<p class ="newProject">My name is Noam Radiano, second year student of Computer Science and Economics at the open university of Israel, looking for a new opportunity.</p>
+<p class ="newProject">I'm an autodidct, a team player, with a quick learning ability.</p>
+<p class ="newProject">Eager to learn and willing to work hard.</p>
+<p class ="newProject">Ahead you can see a few projects I have done lately, feel free to contect me :)</p>
+<p class ="newProject">For CV <a class = "hreff" href="/about">at site</a></p>
+<p class ="newProject">For CV <a class = "hreff" href="/Users/97250/Desktop/Noam/Noam Radiano - CV.pdf" download>download</a> (with grades)</p>
+<% newPost.forEach(function(post){%>
+
+<h2><%= post.title %></h2>
+<p class ="newProject">
+  <%= func(post.body,100) %>
+  <a href="/posts/<%=post._id%>"> Read More</a>
+</p>
+
+<%});%>
+<% include partials/footer.ejs %>
